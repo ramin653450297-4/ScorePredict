@@ -1,0 +1,5 @@
+flask
+fastapi
+line-bot-sdk
+requests
+gunicorn
