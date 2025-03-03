@@ -4,6 +4,8 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, QuickReply, QuickReplyButton, MessageAction
 import requests
 from fastapi import FastAPI
+import uvicorn
+
 
 app = FastAPI()
 
@@ -86,4 +88,4 @@ def predict_student_performance(user_info):
         return "เกิดข้อผิดพลาดในการเชื่อมต่อ API"
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
